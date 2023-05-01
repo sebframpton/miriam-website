@@ -108,19 +108,21 @@
       justify-content: center;
       align-items: center;
       height: 300px;
-      background-color: grey;
+
     }
 
     .about {
       display: flex;
       align-items: center;
       flex-direction: column;
+      background: #C5BCBC;
     }
 
     .contact {
       display: flex;
       align-items: center;
       flex-direction: column;
+      background: #D4CCCC;
     }
 
     .flex-item-left {
@@ -158,13 +160,34 @@
     }
 
     .footer {
-      position: fixed;
+
       left: 0;
-      bottom: 0;
+      bottom: 500px;
       width: 100%;
-      background-color: white;
-      color: black;
+      top: 50px;
+      height: 500px;
+      background-color: #282B34;
+      color: white;
       text-align: center;
+    }
+
+    .bottomNav {
+      display: flex;
+      align-content: flex-start;
+      justify-content: center;
+
+
+    }
+
+    .bottomNav a {
+
+
+
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
     }
 
     @media screen and (max-width: 600px) {
@@ -278,17 +301,38 @@
     <div>
       <h1>Contact</h1>
     </div>
-    <div>2</div>
-    <div>3</div>
+    <div>
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value=""><br><br>
+        <textarea name="message" style="width:300px; height:300px;">The cat was playing in the garden.</textarea>
+        <br>
+        <div>
+          <input class="submit-button" type="submit" value="Submit">
+      </form>
+    </div>
+
   </div>
+
 
   <div class="footer">
     <footer>
+      <div class="bottomNav">
+        <a href="#home" class="active">Logo</a>
+        <a href="#about">Services</a>
+        <a href="#news">About</a>
+        <a href="#contact">Contact</a>
+      </div>
       <p class="attribution">
         <a href="#" target="_blank">Copyright 2023</a>.
         Coded by <a href="#">Sebastian Frampton</a>.
       </p>
-    </footer>
+  </div>
+  </footer>
   </div>
   <script>
     function myFunction() {
