@@ -101,6 +101,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-bottom: 150px;
     }
 
     .flex-container {
@@ -115,14 +116,38 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      text-align: center;
       background: #C5BCBC;
+      padding-top: 150px;
+      height: 100%;
+      padding-bottom: 150px;
     }
 
     .contact {
       display: flex;
       align-items: center;
       flex-direction: column;
+      text-align: center;
       background: #D4CCCC;
+      padding-top: 150px;
+      height: 100%;
+    }
+
+    .input {
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      width: 350px;
+      border-radius: 25px;
+    }
+
+    .textarea {
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      width: 300px;
+      height: 300px;
+      border-radius: 25px;
     }
 
     .flex-item-left {
@@ -159,13 +184,26 @@
       border-radius: 15px;
     }
 
-    .footer {
+    .submit-button {
+      padding: 20px 40px;
+      border: 3px solid #C96A12;
+      color: white;
+      background: #D4CCCC;
+      border-radius: 60px;
+      font-size: 24px;
+    }
 
-      left: 0;
-      bottom: 500px;
+    .submit-button:hover {
+      background: #C96A12;
+      border: 3px solid #C96A12;
+      border-radius: 60px;
+      color: white;
+    }
+
+    .footer {
       width: 100%;
-      top: 50px;
-      height: 500px;
+      top: 350px;
+      height: 360px;
       background-color: #282B34;
       color: white;
       text-align: center;
@@ -180,9 +218,6 @@
     }
 
     .bottomNav a {
-
-
-
       color: #f2f2f2;
       text-align: center;
       padding: 14px 16px;
@@ -190,6 +225,7 @@
       font-size: 17px;
     }
 
+    /* Tablet and Mobile */
     @media screen and (max-width: 600px) {
 
       .topnav a:not(:first-child),
@@ -263,13 +299,13 @@
     <div class="flex-item-left">
       <h2>Dog Walking</h2>
       <img class="dog-walking" src="images/Miriam-dog-walking.jpg" alt="dog walking">
-      <p>: Dog walking around the local parks or around the block.</p>
+      <p>- Dog walking around the local parks or around the block.</p>
       <h2>$10 - 30 minutes per/walk</h2>
     </div>
     <div class="flex-item-right">
       <h2>Dog Sitting</h2>
       <img class="dog-sitting" src="images/Miriam-dog-sitting.jpg" alt="dog walking">
-      <p>: dog sitting at home and dog care as requested for any dog requirements.</p>
+      <p>- Dog sitting at home and dog care as requested for any dog requirements.</p>
       <h2>$20 - per/hour</h2>
     </div>
   </div>
@@ -303,16 +339,19 @@
     </div>
     <div>
       <form action="/action_page.php">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="name">Name:</label><br>
+        <input class="input" type="text" id="name" name="name" value=""><br><br>
+        <label for="phone">Phone:</label><br>
+        <input class="input" type="text" id="phone" name="phone" value=""><br><br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" value=""><br><br>
-        <textarea name="message" style="width:300px; height:300px;">The cat was playing in the garden.</textarea>
-        <br>
-        <div>
-          <input class="submit-button" type="submit" value="Submit">
+        <input class="input" type="email" id="email" name="email" value=""><br><br>
+        <label for="message">Message</label><br>
+        <nr>
+          <textarea class="textarea" name="message"></textarea>
+          <br>
+          <div>
+            <br>
+            <input class="submit-button" type="submit" value="Submit">
       </form>
     </div>
 
@@ -333,7 +372,7 @@
       </p>
   </div>
   </footer>
-  </div>
+
   <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");
